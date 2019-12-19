@@ -42,7 +42,7 @@ const schema = {
   }
 }
 
-readXlsxFile('./_lista músicas.xlsx', { 
+readXlsxFile('d:/Lidio/Google\ Drive/docs/IASD\ Oasis/música/lista\ louvores.xlsx', { 
   schema,
   sheet: "playlist OASIS"
 })
@@ -61,4 +61,7 @@ readXlsxFile('./_lista músicas.xlsx', {
     console.log('All data exported to \'results.js\'');
   });
   ws.end();
+})
+.catch( (data) =>{
+  console.log(data);
 })
