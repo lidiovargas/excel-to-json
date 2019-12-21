@@ -95,6 +95,8 @@ db.oasis.aggregate([
 ]).toArray()
 ```
 
+Na api: `/oasis-report/most-played?from=2019`
+
 Contando o resultado
 
 ```javascript
@@ -126,6 +128,8 @@ db.oasis.aggregate([
 ]).toArray()
 ```
 
+Na api: `/oasis-report/unique-events?from=2019`
+
 ## Quantas músicas cantamos ao todo?
 (inclusive as repetidas)
 
@@ -140,6 +144,7 @@ db.oasis.aggregate([
     { $count : "music" }
 ]).toArray()
 ```
+Na api: `/oasis-report/musics?from=2019`
 
 ## Quantas músicas não repeditas cantamos?
 ```javascript
@@ -155,16 +160,26 @@ db.oasis.aggregate([
 ]).toArray()
 ```
 
+Na api: `/oasis-report/unique-musics?from=2019`
+
 ## Retrospectiva 2019
 
 Em 2019 foram realizados 39 encontros no Oásis.
+>Na api: `/oasis-report/unique-events?from=2019`
 
 Cantamos 119 músicas ao todo, o que dá 10 horas cantando. Se tirarmos as músicas repetidas, cantamos 62 músicas diferentes.
+>Na api: `/oasis-report/musics?from=2019`
+
+>Na api: `/oasis-report/unique-musics?from=2019`
+
+>Estimativa: `musics.length * 5 / 60`
 
 As músicas mais cantadas que ocuparam o pódio são: 
 - 9 vezes = Maranata
 - 6 vezes = [Eu só quero estar, Mais perto quero estar, Vim para adorarte]
 - 5 vezes = Horas benditas
+
+>Na api: `todo`
 
 Pessoas que participaram tocando: 
 - André (violão)
@@ -190,6 +205,8 @@ Pessoas que ajudaram passando os slides:
 - Carlos
 - Juliana
 - Sarah
+
+>Na api: `todo [banda, cantores, pps]`
 
 A seguir, a relação completa de músicas, agrupadas pelas mais cantadas:
 
