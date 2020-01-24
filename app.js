@@ -1,6 +1,6 @@
 const readXlsxFile = require('read-excel-file/node');
 const fs = require('fs');
-const { urls } = require('./urls.js');
+const { urls } = require('./config/urls.js');
 
 // Date, ISODate, Music, #, Resp, Band, Notes, Where
 const schema = {
